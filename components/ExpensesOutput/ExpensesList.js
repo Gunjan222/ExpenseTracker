@@ -1,8 +1,10 @@
 import React from 'react';
-import {FlatList} from 'react-native';
+import {Text, FlatList} from 'react-native';
+import {GlobalStyles} from '../../constant/styles';
+import ExpensesItem from './ExpensesItem';
 
 const renderExpenseItem = itemData => {
-  return <Text>{itemData.item.description}</Text>;
+  return <ExpensesItem {...itemData.item} />;
 };
 
 function ExpensesList({expenses}) {
